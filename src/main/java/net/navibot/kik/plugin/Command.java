@@ -2,9 +2,9 @@ package net.navibot.kik.plugin;
 
 @SuppressWarnings("unused")
 public @interface Command {
-    String getBodyRegex();
+    String getBodyRegex() default "";
 
     String getTrigger();
 
-    boolean exactOnly();
+    boolean exactOnly() default true;
 }
