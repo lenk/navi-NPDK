@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class Group {
+public abstract class Group {
     private final HashMap<String, Object> storage;
     private final List<Member> members;
     private final String picture;
@@ -39,4 +39,6 @@ public class Group {
     public boolean isPublicChat() {
         return publicChat;
     }
+
+    abstract void send(Response response);
 }
