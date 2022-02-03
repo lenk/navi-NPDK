@@ -8,9 +8,11 @@ import java.lang.annotation.*;
 @Documented
 @SuppressWarnings("unused")
 public @interface Command {
-    String getBodyRegex() default "";
+    String bodyRegex() default "";
 
-    String getTrigger();
+    String menuTrigger() default "extras";
+
+    String trigger();
 
     boolean exactOnly() default true;
 }
