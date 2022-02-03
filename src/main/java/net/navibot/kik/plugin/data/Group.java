@@ -40,5 +40,5 @@ public abstract class Group {
         return publicChat;
     }
 
-    abstract void send(Response response);
+    public abstract void send(Response response);
 }
